@@ -8,7 +8,7 @@ public class MyApp {
 
     public static void main(String[] args) {
 
-        ApplicationContext ctx = new AnnotationConfigApplicationContext(MyNameMessageService.class, RandomTextMessageService.class);
+        ApplicationContext ctx = new AnnotationConfigApplicationContext(MessageServiceConfig.class);
         MessageService messageService = ctx.getBean(MyNameMessageService.class);
         MessageService messageService2 = ctx.getBean(RandomTextMessageService.class);
 
